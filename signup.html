@@ -1,0 +1,176 @@
+<html>
+    <style>
+        body {
+        background-image: url("https://i.imgur.com/QCuUAp3.jpg");
+        color :aqua;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        }
+        
+    </style>
+    <style>
+        .btn-group .button {
+        background-color: rgb(149, 85, 202); /* purple */
+        border: 1px solid purple;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        cursor: pointer;
+        float: none;
+        }
+        .btn-group .button:not(:last-child){
+            border-right: none;
+        }
+        .btn-group .button:hover {
+            background-color: rebeccapurple;
+        }
+    </style>
+    
+    <h1 align= center>
+        Space Exodus Sign Up
+    </h1>
+    <body>
+        <br> <br> <br> <br> <br> <br>
+        
+        <p align= center>
+            Please Insert Your Email and Password to Log Your Progress
+        </p>
+        
+        <p align= center>
+            <input id="email" placeholder="EMAIL ADRESS" />
+            <input id="password" placeholder="PASSWORD" />
+            <button onclick="OnWard()">OnWard</button>
+        </p>
+        <p align=center>
+            Sign In 
+        </p> 
+        <p align=center>
+            <input id="semail" placeholder="EMAIL ADRESS" />
+            <input id="spassword" placeholder="PASSWORD" />
+            <button onclick="LetTheJourneyContinue()">OnWard</button>
+        </p>
+        <p align= center>
+            <button onclick="signOut()">Sign Out</button>
+        </p>
+
+<!--code to link up to fire base-->
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-firestore.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyAS-KLVf94ggpET1Ox8LjTEz-4IksD5VCE",
+    authDomain: "hacksocal2020.firebaseapp.com",
+    databaseURL: "https://hacksocal2020.firebaseio.com",
+    projectId: "hacksocal2020",
+    storageBucket: "hacksocal2020.appspot.com",
+    messagingSenderId: "1047897971645",
+    appId: "1:1047897971645:web:ad753520fb91ecbbfc90d4",
+    measurementId: "G-HSNCZZYDWY"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+<script> 
+    let uid;
+  // The time and health for our players  
+    var health= 100;
+    var time= 100;
+    var lost="You lose"
+    var Go="Keep going adventurer!"
+    var text1= "going down this path lead you to an asteroid field! You lost some health. health left:"
+    var text2="Looking for a shorter path you got lost and wasted time! time left:"
+    var text3="Although it took some time, you fixed the ship! time left:"
+    var text4="Your crew fixed the thrusters, but they got hit by a solar flair! Their space gear made it so that they only got hurt. health: "
+    var text5v1="You saved some time but you lost health in the process. health:"
+    var text5v2="time:"
+    var text6v1="The medkit raised your health but took time to make. time: "
+    var text6v2="health:"
+    var text7="Your ace piloting skills have helped you in escaping the pirates but at a great cost to your time. time:"
+    var text8="You and your crew readied your plasma cannons and proton beams. You deafeated the pirates in a vicious battle but at a great cost to your health. health:"
+    function choice1(){
+        let rando1= Math.floor((Math.random()*20)+15);
+        health=health-rando1;
+        window.alert(text1 + health);
+    }
+    function choice2(){
+        let rando2= Math.floor((Math.random()*20)+15);
+        time=time-rando2;
+        window.alert(text2 + time);
+
+    }
+    function choice3(){
+        let rando3= Math.floor((Math.random()*30)+25);
+        time=time-rando3;
+        window.alert(text3 + time);
+
+    }
+    function choice4(){
+        let rando4= Math.floor((Math.random()*30)+25);
+        health=health-rando4;
+        window.alert(text4 + health);
+    }
+    function choice5(){
+        let rando5v1= Math.floor((Math.random()*15)+1);
+        let rando5v2= Math.floor((Math.random()*10)+1);
+        health=health-rando5v1;
+        time=time+rando5v2;
+        window.alert(text5v1 + health + text5v2 + time);
+    }
+    function choice6(){
+        let rando6v1= Math.floor((Math.random()*15)+1);
+        let rando6v2= Math.floor((Math.random()*10)+1);
+        time=time-rando6v1;
+        health=health+rando6v2;
+        window.alert(text6v1 + time + text6v2 + health);
+    }
+    function choice7(){
+        time=time/2;
+        window.alert(text7 + time);
+
+    }
+    function choice8(){
+       health=health/2
+       window.alert(text8 + health)
+    }
+    
+    function gamecheck(){
+            if(health<=0||time<=0){
+                window.alert(lost);  
+            }
+            else{
+                window.alert(Go);    
+
+            }
+
+    }
+
+function OnWard() {
+    let email = document.getElementById('email').value;
+    let password = document.getElementById('password').value;
+//these are functions for the fire base to do something with the data entered above
+    firebase.auth().createUserWithEmailAndPassword(email,password);
+}   
+function LetTheJourneyContinue() {
+    let semail = document.getElementById('semail').value;
+    let spassword = document.getElementById('spassword').value;
+
+    firebase.auth().signInWithEmailAndPassword(semail,spassword);
+}
+function signOut() {
+        firebase.auth().signOut();
+}
+</script>
+    </body>
+</html>

@@ -127,8 +127,8 @@
        </p>
        
         <div class="btn-group" align= center>
-            <button class="button" onclick="choice5(); onclick=gamecheck()">Get the rocket fuel</button>
-            <button class="button" onclick="choice6(); onclick=gamecheck()">Get the medkit</button>
+            <button class="button" onclick="choice5(); onclick=gamecheck();">Get the rocket fuel</button>
+            <button class="button" onclick="choice6(); onclick=gamecheck();">Get the medkit</button>
         </div>
        <br>
 
@@ -137,8 +137,8 @@
         </p> 
 
         <div class="btn-group" align= center>
-            <button class="button" onclick="choice7(); onclick=gamecheck()">Escape</button>
-            <button class="button" onclick="choice8(); onclick=gamecheck()">Fight</button>
+            <button class="button" onclick="choice7(); onclick=gamecheck();">Escape</button>
+            <button class="button" onclick="choice8(); onclick=gamecheck();">Fight</button>
         </div>
         <br>
         
@@ -149,8 +149,8 @@
         </p>
         
         <div class="btn-group" align= center>
-            <button class="button" onclick="choice9(); onclick=gamecheck()">Give them the coordinates</button>
-            <button class="button" onclick="choice10(); onclick=gamecheck()">Keep the coordinates</button>
+            <button class="button" onclick="choice9(); onclick=gamecheck();">Give them the coordinates</button>
+            <button class="button" onclick="choice10(); onclick=gamecheck();">Keep the coordinates</button>
         </div>
 
 <!--code to link up to fire base-->
@@ -197,24 +197,24 @@
     var text7="Your ace piloting skills have helped you in escaping the pirates but at a great cost to your time. time:"
     var text8="You and your crew readied your plasma cannons and proton beams. You deafeated the pirates in a vicious battle but at a great cost to your health. health:"
     function choice1(){
-        let rando1= Math.floor((Math.random()*20)+10);
+        let rando1= Math.floor((Math.random()*20)+15);
         health=health-rando1;
         window.alert(text1 + health);
     }
     function choice2(){
-        let rando2= Math.floor((Math.random()*20)+10);
+        let rando2= Math.floor((Math.random()*20)+15);
         time=time-rando2;
         window.alert(text2 + time);
 
     }
     function choice3(){
-        let rando3= Math.floor((Math.random()*30)+20);
+        let rando3= Math.floor((Math.random()*30)+25);
         time=time-rando3;
         window.alert(text3 + time);
 
     }
     function choice4(){
-        let rando4= Math.floor((Math.random()*30)+20);
+        let rando4= Math.floor((Math.random()*30)+25);
         health=health-rando4;
         window.alert(text4 + health);
     }
