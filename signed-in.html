@@ -190,6 +190,7 @@
     var time= 100;
     var lost="You lose"
     var Go="Keep going adventurer!"
+    var bad = "You were tricked, HexCorp not only took the coordinates, arriving to the planet of Axi before you, but they also took your supplies, leaving you to slowly die in the vaccum of space."
     var text1= "going down this path lead you to an asteroid field! You lost some health. health left:"
     var text2="Looking for a shorter path you got lost and wasted time! time left:"
     var text3="Although it took some time, you fixed the ship! time left:"
@@ -243,12 +244,19 @@
    }
    function choice8(){
        health=health/2
-       window.alert(text8 + health)
+       window.alert(text8 + ": " + health);
+   }
+
+   function choice9(){
+       health = 0;
+       time = 0;
+       window.alert(bad);
    }
     
     function gamecheck(){
             if(health<=0||time<=0){
-                window.alert(lost);  
+                window.alert(lost);
+                window.location.href = 'losepage.html';  
             }
             else{
                 window.alert(Go);    
