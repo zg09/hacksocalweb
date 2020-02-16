@@ -70,26 +70,6 @@
         </p>
 
         <p align=center>
-            <input type="String" id="testString"
-            placeholder="Your name here" />
-        </p>
-        <p align=center>
-            Who are your crewmates?
-        </p>
-        <form align=center>
-            
-            <input type="String" id="crew-1" 
-            placeholder="Crewmate 1" /> 
-
-            <input type="String" id="crew-2"
-            placeholder="Crewmate 2" />
-
-            <input type="String" id="crew-3"
-            placeholder="Crewmate 3" />
-
-        </form>
-
-        <p align=center>
             You start the game with 100 health and 100 days. During the game you can choose to loose<br>
             health or time. After every decision you must press the gamecheck button to see if you lost or can keep going.<br>
             You as the captain will make all final decisions but your crewmates are avalible to talk to and debate with.<br>
@@ -154,7 +134,7 @@
         
         <div class="btn-group" align= center>
             <button class="button" onclick="choice9(); onclick=gamecheck();">Give them the coordinates</button>
-            <button class="button" onclick="choice10(); onclick=gamecheck();">Keep the coordinates</button>
+            <button class="button" onclick="choice10(); onclick=win();">Keep the coordinates</button>
         </div>
 
 <!--code to link up to fire base-->
@@ -272,6 +252,10 @@
     function win(){
         window.alert(congrats);
         window.location.href = 'winpage.html';  
+    }
+    
+    function signOut(){
+        window.location.href = 'wweb.html'
     }
 </script>
     </body>
