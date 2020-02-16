@@ -6,7 +6,6 @@
         background-repeat: no-repeat;
         background-size: 100% 100%;
         }
-        
     </style>
     <style>
         .btn-group .button {
@@ -28,6 +27,26 @@
             background-color: rebeccapurple;
         }
     </style>
+    <style>
+        .button 
+        {
+            background-color: whitesmoke
+            border none;
+            color: none;
+            padding: 6px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 10px;
+            margin: 2px 2px;
+            cursor: pointer;
+        }
+        .btn-group2 .button2:hover {
+            background-color: gray;
+        }
+
+        .button1 {border-radius: 4px;}
+    </style>
     <audio controls loop >
         
         <source src="C:\Users\Jeremy\Downloads\Retro-style-synth-music-loop (1)\Retro-style-synth-music-loop.mp3" type="audio/mpeg">
@@ -35,123 +54,37 @@
       </audio>
       
     <body>
-        <h1 align= center>
+        <h1 align = center>
             Space Exodus
         </h1>
-        <p align= center>
-            Sign Up
+        <p><font size=20>Space Exodus</font></p>
+
+        <p align = right>
+            <input id="clickMe" type="button" value="gamecheck" onclick="gamecheck();"/>
         </p>
-        
-        <p align= center>
+
+        <h2 align = center>
+            Sign Up
+        </h2>   
+
+        <p align = center>
+            
             <input id="email" placeholder="EMAIL ADRESS" />
             <input id="password" placeholder="PASSWORD" />
-            <button onclick="OnWard()">OnWard</button>
+            <button class="button button2"onclick="OnWard()">OnWard</button>
         </p>
-        <p align=center>
+
+        <h2 align = center>
             Sign In 
-        </p> 
+        </h2> 
         <p align=center>
             <input id="semail" placeholder="EMAIL ADRESS" />
             <input id="spassword" placeholder="PASSWORD" />
-            <button onclick="LetTheJourneyContinue()">OnWard</button>
+            <button class="button button2"onclick="LetTheJourneyContinue()">Continue Journey</button>
         </p>
-        <p align= center>
-            <button onclick="signOut()">Sign Out</button>
-        </p>
-        <p align=center>
-            You are a Captain of the Intergalactic Archaeologiy Guild and we are giving you top secret coordinates<br> 
-            to the lost planet of Axi. Your job is to get to Axi and preserve the people and history there. <br>  
-            You absolutely musn't give the coordinates to Hex corp. They will take advantage of the people<br> 
-            and their resources.  Type the three names of your closest and bravest friends:
-
-        </p>
-        <p align=center>
-            <input type="String" id="testString"
-            placeholder="Your name here" />
-        </p>
-        <p align=center>
-            Who are your crewmates?
-        </p>
-        <form align=center>
-            
-            <input type="String" id="crew-1" 
-            placeholder="Crewmate 1" /> 
-
-            <input type="String" id="crew-2"
-            placeholder="Crewmate 2" />
-
-            <input type="String" id="crew-3"
-            placeholder="Crewmate 3" />
-
-        </form>
-
-        <p align=center>
-            You start the game with 100 health and 100 days. During the game you can choose to loose<br>
-            health or time. After every decision you must press the gamecheck button to see if you lost or can keep going.<br>
-            You as the captain will make all final decisions but your crewmates are avalible to talk to and debate with.<br>
-            If you reach the end of the game press the finnish game button to win! 
-        </p>
-        <br>
-        <p align=center>
-            Your navigation AI is malfunctioning! 
-            <br>
-            You can take the path you think it showed you before or try to find a shorter way.
-        </p>
-        
-        <div class="btn-group" align= center>
-            <button class="button" onclick="choice1(); onclick=gamecheck();">Go the original route</button>
-            <button class="button" onclick="choice2(); onclick=gamecheck();">Try to find a short path</button>
-        </div>
-        <br>
-
-       <p align= center>
-            Continuing on your journey, you entered the range of a nearby star were hit by a solar flare!<br>
-            The flare caused your external thrusters to shut down.  <br>
-            You can take your time and fix your systems from the inside or send your crew <br>
-            out to fix it quickly.
-       </p>
-       <br>
-        <div class="btn-group" align= center>
-            <button class="button" onclick="choice3(); onclick=gamecheck();">Fix from the inside</button>
-            <button class="button" onclick="choice4(); onclick=gamecheck();">Send out your crew</button>
-        </div>
-       <br>
-
-       <p align= center>
-            You see a shining light ahead of you that appears to be spinning. <br>
-            It's a space station! You head inside with your crew.<br>
-            As you walk up you get a glismpe of the famous salesclerk Astro! The Astounding Automaton! <br>
-            The generous salesman he is, he offers you a choice of two convenient items:<br>
-            Rocket fuel that is great for saving time, but its fuemes are bad for health. <br>
-            Or a medkit that will raise your heath but will take some time to make.
-       </p>
        
-        <div class="btn-group" align= center>
-            <button class="button" onclick="choice5(); onclick=gamecheck();">Get the rocket fuel</button>
-            <button class="button" onclick="choice6(); onclick=gamecheck();">Get the medkit</button>
-        </div>
-       <br>
 
-        <p align= center> You leave Astro's shop uncertain of what will happen next.  As you are sailing through the galaxy a group of<br>
-        space pirates attacks your ship!.  You can either fly away to escape  and lose half your time or fight the pirates and lose half your health.
-        </p> 
 
-        <div class="btn-group" align= center>
-            <button class="button" onclick="choice7(); onclick=gamecheck();">Escape</button>
-            <button class="button" onclick="choice8(); onclick=gamecheck();">Fight</button>
-        </div>
-        <br>
-        
-        <p align = center>
-            After taking that tough blow to yor resources You and your crew are in desperate need of assistance><br>
-            Suddenly you are reciving an incoming transmission from Hex corp!  The CEO of Hex corp has promised you endless riches <br>
-            if you give them the coordinates to Axi!
-        </p>
-        
-        <div class="btn-group" align= center>
-            <button class="button" onclick="choice9(); onclick=gamecheck();">Give them the coordinates</button>
-            <button class="button" onclick="choice10(); onclick=gamecheck();">Keep the coordinates</button>
-        </div>
 
 <!--code to link up to fire base-->
 <!-- The core Firebase JS SDK is always required and must be listed first -->
@@ -197,50 +130,50 @@
     var text7="Your ace piloting skills have helped you in escaping the pirates but at a great cost to your time. time:"
     var text8="You and your crew readied your plasma cannons and proton beams. You deafeated the pirates in a vicious battle but at a great cost to your health. health:"
     function choice1(){
-        let rando1= Math.floor((Math.random()*20)+15);
-        health=health-rando1;
-        window.alert(text1 + health);
+        let rando1= Math.floor((Math.random()*20)+10);
+       health=health-rando1;
+       window.alert(text1 + health);
     }
     function choice2(){
-        let rando2= Math.floor((Math.random()*20)+15);
-        time=time-rando2;
-        window.alert(text2 + time);
+        let rando2= Math.floor((Math.random()*20)+10);
+       time=time-rando2;
+       window.alert(text2 + time);
 
     }
     function choice3(){
-        let rando3= Math.floor((Math.random()*30)+25);
-        time=time-rando3;
-        window.alert(text3 + time);
+        let rando3= Math.floor((Math.random()*30)+20);
+       time=time-rando3;
+       window.alert(text3 + time);
 
     }
     function choice4(){
-        let rando4= Math.floor((Math.random()*30)+25);
-        health=health-rando4;
-        window.alert(text4 + health);
+        let rando4= Math.floor((Math.random()*30)+20);
+       health=health-rando4;
+       window.alert(text4 + health);
     }
     function choice5(){
         let rando5v1= Math.floor((Math.random()*15)+1);
         let rando5v2= Math.floor((Math.random()*10)+1);
-        health=health-rando5v1;
-        time=time+rando5v2;
-        window.alert(text5v1 + health + text5v2 + time);
+       health=health-rando5v1;
+       time=time+rando5v2;
+       window.alert(text5v1 + health + text5v2 + time);
     }
-    function choice6(){
-        let rando6v1= Math.floor((Math.random()*15)+1);
-        let rando6v2= Math.floor((Math.random()*10)+1);
-        time=time-rando6v1;
-        health=health+rando6v2;
-        window.alert(text6v1 + time + text6v2 + health);
-    }
-    function choice7(){
+   function choice6(){
+    let rando6v1= Math.floor((Math.random()*15)+1);
+    let rando6v2= Math.floor((Math.random()*10)+1);
+    time=time-rando6v1;
+    health=health+rando6v2;
+    window.alert(text6v1 + time + text6v2 + health);
+   }
+   function choice7(){
         time=time/2;
         window.alert(text7 + time);
 
-    }
-    function choice8(){
+   }
+   function choice8(){
        health=health/2
        window.alert(text8 + health)
-    }
+   }
     
     function gamecheck(){
             if(health<=0||time<=0){
@@ -248,22 +181,24 @@
             }
             else{
                 window.alert(Go);    
-
             }
-
     }
 
 function OnWard() {
     let email = document.getElementById('email').value;
     let password = document.getElementById('password').value;
 //these are functions for the fire base to do something with the data entered above
-    firebase.auth().createUserWithEmailAndPassword(email,password);
+    firebase.auth().createUserWithEmailAndPassword(email,password).then(function () {
+        window.location.href = './signed-in.html';
+    });
 }   
 function LetTheJourneyContinue() {
     let semail = document.getElementById('semail').value;
     let spassword = document.getElementById('spassword').value;
 
-    firebase.auth().signInWithEmailAndPassword(semail,spassword);
+    firebase.auth().silocationgnInWithEmailAndPassword(semail,spassword).then(function () {
+        window.location.href = './signed-in.html';
+    });
 }
 function signOut() {
         firebase.auth().signOut();
