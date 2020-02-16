@@ -1,0 +1,71 @@
+<html>
+    <style>
+        body {
+        background-image: url("https://i.imgur.com/jx8ytSW.png");
+        color :rgb(193, 219, 192);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        }
+        .btn-group .button {
+        background-color: rgb(149, 85, 202); /* purple */
+        border: 1px solid purple;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        cursor: pointer;
+        float: none;
+        }
+        .btn-group .button:not(:last-child){
+            border-right: none;
+        }
+        .btn-group .button:hover {
+            background-color: rebeccapurple;
+        }
+    </style>
+    <body>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="btn-group" align= center>
+            <button class="button" onclick=restart();>Restart your Journey?</button>
+        </div>
+
+<!--code to link up to fire base-->
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-firestore.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyAS-KLVf94ggpET1Ox8LjTEz-4IksD5VCE",
+    authDomain: "hacksocal2020.firebaseapp.com",
+    databaseURL: "https://hacksocal2020.firebaseio.com",
+    projectId: "hacksocal2020",
+    storageBucket: "hacksocal2020.appspot.com",
+    messagingSenderId: "1047897971645",
+    appId: "1:1047897971645:web:ad753520fb91ecbbfc90d4",
+    measurementId: "G-HSNCZZYDWY"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+<script> 
+ function restart(){
+    window.location.href = './signed-in.html';
+ }
+</script>
+    </body>
+</html>

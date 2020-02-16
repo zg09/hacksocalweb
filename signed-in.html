@@ -190,7 +190,6 @@
     var time= 100;
     var lost="You lose"
     var Go="Keep going adventurer!"
-    var bad = "You were tricked, HexCorp not only took the coordinates, arriving to the planet of Axi before you, but they also took your supplies, leaving you to slowly die in the vaccum of space."
     var text1= "going down this path lead you to an asteroid field! You lost some health. health left:"
     var text2="Looking for a shorter path you got lost and wasted time! time left:"
     var text3="Although it took some time, you fixed the ship! time left:"
@@ -201,6 +200,10 @@
     var text6v2="health:"
     var text7="Your ace piloting skills have helped you in escaping the pirates but at a great cost to your time. time:"
     var text8="You and your crew readied your plasma cannons and proton beams. You deafeated the pirates in a vicious battle but at a great cost to your health. health:"
+    var text9 = "You were tricked, HexCorp not only took the coordinates, arriving to the planet of Axi before you, but they also took your supplies, leaving you to slowly die in the vaccum of space."
+    var text10 = "You did well in avoiding the influence of Hex Corp, due to your resolve, the rest of your journey has gone smoothly, and you've successfully made it to Axi, and the Axolotl's which have been aliens the whole time are happy to see you."
+    var congrats = "Congratulations!"
+
     function choice1(){
         let rando1= Math.floor((Math.random()*20)+10);
        health=health-rando1;
@@ -250,7 +253,11 @@
    function choice9(){
        health = 0;
        time = 0;
-       window.alert(bad);
+       window.alert(text9);
+   }
+   
+   function choice10(){
+       window.alert(text10);
    }
     
     function gamecheck(){
@@ -262,7 +269,10 @@
                 window.alert(Go);    
             }
     }
-
+    function win(){
+        window.alert(congrats);
+        window.location.href = 'winpage.html';  
+    }
 </script>
     </body>
 </html>
