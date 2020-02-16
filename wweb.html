@@ -1,0 +1,86 @@
+<html>
+    <body>
+        <h1>
+            Space Oregon Trail
+        </h1>
+        <p>
+            Sign Up
+        </p>
+        <p>
+            <input id="email" placeholder="EMAIL ADRESS" />
+            <input id="password" placeholder="PASSWORD" />
+            <button onclick="Onward()">OnWard</button>
+        </p>
+        <p>
+            Sign In 
+        </p>
+        <p>
+            <input id="semail" placeholder="EMAIL ADRESS" />
+            <input id="spassword" placeholder="PASSWORD" />
+            <button onclick="LetTheJourneyContinue()">OnWard</button>
+        </p>
+
+            Hello captain, your goal is to get to the planet. What is your name?
+        </p>
+        <p>
+            <input type="String" id="testString"
+            placeholder="Your name here" />
+        </p>
+        <p>
+            Who are your crewmates?
+        </p>
+        <p>
+            
+            <input type="String" id="crew-1" 
+            placeholder="Crewmate 1" /> 
+
+            <input type="String" id="crew-2"
+            placeholder="Crewmate 2" />
+
+            <input type="String" id="crew-3"
+            placeholder="Crewmate 3" />
+
+        </p>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyAS-KLVf94ggpET1Ox8LjTEz-4IksD5VCE",
+    authDomain: "hacksocal2020.firebaseapp.com",
+    databaseURL: "https://hacksocal2020.firebaseio.com",
+    projectId: "hacksocal2020",
+    storageBucket: "hacksocal2020.appspot.com",
+    messagingSenderId: "1047897971645",
+    appId: "1:1047897971645:web:ad753520fb91ecbbfc90d4",
+    measurementId: "G-HSNCZZYDWY"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+<script>
+    let uid;
+
+function OnWard() {
+    let email = document.getElementById('email').value;
+    let password = document.getElementById('password').value;
+
+    firebase.auth().signInWithEmailAndPassword(email,password);
+}   
+function LetTheJourneyContinue() {
+    let semail = document.getElementById('semail').value;
+    let spassword = document.getElementById('spassword').value;
+
+    firebase.auth().signInWithEmailAndPassword(semail,spassword);
+}   
+</script>
+
+    </body>
+</html>
