@@ -13,13 +13,16 @@
         </p>
         <p>
             Sign In 
-        </p>
+        </p> 
         <p>
             <input id="semail" placeholder="EMAIL ADRESS" />
             <input id="spassword" placeholder="PASSWORD" />
             <button onclick="LetTheJourneyContinue()">OnWard</button>
         </p>
-
+        <p>
+            <button onclick="signOut()">Sign Out</button>
+        </p>
+        <p>
             Hello captain, your goal is to get to the planet. What is your name?
         </p>
         <p>
@@ -81,8 +84,10 @@ function LetTheJourneyContinue() {
     let spassword = document.getElementById('spassword').value;
 
     firebase.auth().signInWithEmailAndPassword(semail,spassword);
-}   
+}
+function signOut() {
+        firebase.auth().signOut();
+}
 </script>
-
     </body>
 </html>
