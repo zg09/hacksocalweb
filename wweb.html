@@ -40,8 +40,9 @@
             <button onclick="signOut()">Sign Out</button>
         </p>
         <p align=center>
-            Greetings captain! You think you have what it takes to beat the odds and find civilization in <br> 
-            space? Really? Well, you're lucky! Type the three names of your closest and bravest friends:
+            You are a Captain of the Intergalactic Archaeologiy Guild and we are giving you top secret coordinates<br> 
+            to the lost planet of Axi. Your job is to get to Axi and preserve the people and history there. <br>  
+            You absolutely musn't .Type the three names of your closest and bravest friends:
 
         </p>
         <p align=center>
@@ -67,7 +68,8 @@
         <p align=center>
             You start the game with 100 health and 100 days. During the game you can choose to loose<br>
             health or time. After every decision you must press the gamecheck button to see if you lost or can keep going.<br>
-
+            You as the captain will make all final decisions but your crewmates are avalible to talk to and debate with.<br>
+            If you reach the end of the game press the finnish game button to win! 
         </p>
         <br>
         <p align=center>
@@ -83,9 +85,19 @@
        </p>
        <br>
        <p> <input id="clickMe" type="button" value="fix from the inside" onclick="choice3();" /></p> <p align= right><input id="clickMe" type="button" value="send out your crew" onclick="choice4();" /></p>
-       
-       
+       <br>
+       <p align= center>
+           You see a shining light ahead of you that appears to be spinning. It's a space station! You head inside with your crew.<br>
+           As you walk up you get a glismpe of the famous salesclerk Astro! The Astounding Automaton! he offers you the choice of <br>
+           of rocket fuel that is great for saving time but its fuemes are bad for health or a medkit that will raise your heath but will take some time to make.
+       </p>
+       <p> <input id="clickMe" type="button" value="Get the rocket fuel" onclick="choice5();" /></p> <p align= right><input id="clickMe" type="button" value="get the medkit" onclick="choice6();" /></p>
+        <br>
+       <p align= center> You leave Astro's shop uncertain of what will happen next.  As you are sailing through the galaxy a group of<br>
+        space pirates attacks your ship!.  You can either fly away to escape  and lose half your time or fight the pirates and lose half your health.
+    </p> 
 
+    <p> <input id="clickMe" type="button" value="escape" onclick="choice7();" /></p> <p align= right><input id="clickMe" type="button" value="fight" onclick="choice8();" /></p>
 
 <!--code to link up to fire base-->
 <!-- The core Firebase JS SDK is always required and must be listed first -->
@@ -124,6 +136,12 @@
     var text2="Looking for a shorter path you got lost and wasted time! time left:"
     var text3="Although it took some time, you fixed the ship! time left:"
     var text4="Your crew fixed the thrusters, but they got hit by a solar flair! Their space gear made it so that they only got hurt. health: "
+    var text5v1="You saved some time but you lost health in the process. health:"
+    var text5v2="time:"
+    var text6v1="The medkit raised your health but took time to make. time: "
+    var text6v2="health:"
+    var text7="Your ace piloting skills have helped you in escaping the pirates but at a great cost to your time. time:"
+    var text8="You and your crew readied your plasma cannons and proton beams. You deafeated the pirates in a vicious battle but at a great cost to your health. health:"
     function choice1(){
         let rando1= Math.floor((Math.random()*20)+10);
        health=health-rando1;
@@ -146,6 +164,30 @@
        health=health-rando4;
        window.alert(text4 + health);
     }
+    function choice5(){
+        let rando5v1= Math.floor((Math.random()*15)+1);
+        let rando5v2= Math.floor((Math.random()*10)+1);
+       health=health-rando5v1;
+       time=time+rando5v2;
+       window.alert(text5v1 + health + text5v2 + time);
+    }
+   function choice6(){
+    let rando6v1= Math.floor((Math.random()*15)+1);
+    let rando6v2= Math.floor((Math.random()*10)+1);
+    time=time-rando6v1;
+    health=health+rando6v2;
+    window.alert(text6v1 + time + text6v2 + health);
+   }
+   function choice7(){
+        time=time/2;
+        window.alert(text7 + time);
+
+   }
+   function choice8(){
+       health=health/2
+       window.alert(text8 + health)
+   }
+    
     function gamecheck(){
             if(health<=0||time<=0){
                 window.alert(lost);  
