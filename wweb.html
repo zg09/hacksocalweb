@@ -96,7 +96,9 @@
         </p>
         <br>
         <p align=center>
-            Your navigation AI is malfunctioning! You can take the path you think it showed you before or try to find a shorter way.
+            Your navigation AI is malfunctioning! 
+            <br>
+            You can take the path you think it showed you before or try to find a shorter way.
         </p>
         
         <div class="btn-group" align= center>
@@ -106,9 +108,10 @@
         <br>
 
        <p align= center>
-           Despite your decision, as you were travelling on your journey, you got too close to a nearby star and got hit with a solar flare!<br>
-           The flair caused your external thrusters to shut down.  You can take your time and fix your systems from the inside or send your crew <br>
-           out to fix it quickly.
+            Continuing on your journey, you entered the range of a nearby star were hit by a solar flare!<br>
+            The flare caused your external thrusters to shut down.  <br>
+            You can take your time and fix your systems from the inside or send your crew <br>
+            out to fix it quickly.
        </p>
        <br>
         <div class="btn-group" align= center>
@@ -118,9 +121,12 @@
        <br>
 
        <p align= center>
-           You see a shining light ahead of you that appears to be spinning. It's a space station! You head inside with your crew.<br>
-           As you walk up you get a glismpe of the famous salesclerk Astro! The Astounding Automaton! he offers you the choice of <br>
-           of rocket fuel that is great for saving time but its fuemes are bad for health or a medkit that will raise your heath but will take some time to make.
+            You see a shining light ahead of you that appears to be spinning. <br>
+            It's a space station! You head inside with your crew.<br>
+            As you walk up you get a glismpe of the famous salesclerk Astro! The Astounding Automaton! <br>
+            The generous salesman he is, he offers you a choice of two convenient items:<br>
+            Rocket fuel that is great for saving time, but its fuemes are bad for health. <br>
+            Or a medkit that will raise your heath but will take some time to make.
        </p>
        
         <div class="btn-group" align= center>
@@ -195,49 +201,49 @@
     var text8="You and your crew readied your plasma cannons and proton beams. You deafeated the pirates in a vicious battle but at a great cost to your health. health:"
     function choice1(){
         let rando1= Math.floor((Math.random()*20)+10);
-       health=health-rando1;
-       window.alert(text1 + health);
+        health=health-rando1;
+        window.alert(text1 + health);
     }
     function choice2(){
         let rando2= Math.floor((Math.random()*20)+10);
-       time=time-rando2;
-       window.alert(text2 + time);
+        time=time-rando2;
+        window.alert(text2 + time);
 
     }
     function choice3(){
         let rando3= Math.floor((Math.random()*30)+20);
-       time=time-rando3;
-       window.alert(text3 + time);
+        time=time-rando3;
+        window.alert(text3 + time);
 
     }
     function choice4(){
         let rando4= Math.floor((Math.random()*30)+20);
-       health=health-rando4;
-       window.alert(text4 + health);
+        health=health-rando4;
+        window.alert(text4 + health);
     }
     function choice5(){
         let rando5v1= Math.floor((Math.random()*15)+1);
         let rando5v2= Math.floor((Math.random()*10)+1);
-       health=health-rando5v1;
-       time=time+rando5v2;
-       window.alert(text5v1 + health + text5v2 + time);
+        health=health-rando5v1;
+        time=time+rando5v2;
+        window.alert(text5v1 + health + text5v2 + time);
     }
-   function choice6(){
-    let rando6v1= Math.floor((Math.random()*15)+1);
-    let rando6v2= Math.floor((Math.random()*10)+1);
-    time=time-rando6v1;
-    health=health+rando6v2;
-    window.alert(text6v1 + time + text6v2 + health);
-   }
-   function choice7(){
+    function choice6(){
+        let rando6v1= Math.floor((Math.random()*15)+1);
+        let rando6v2= Math.floor((Math.random()*10)+1);
+        time=time-rando6v1;
+        health=health+rando6v2;
+        window.alert(text6v1 + time + text6v2 + health);
+    }
+    function choice7(){
         time=time/2;
         window.alert(text7 + time);
 
-   }
-   function choice8(){
+    }
+    function choice8(){
        health=health/2
        window.alert(text8 + health)
-   }
+    }
     
     function gamecheck(){
             if(health<=0||time<=0){
