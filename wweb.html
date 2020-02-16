@@ -12,12 +12,10 @@
         <p align= center>
             Sign Up
         </p>
-<<<<<<< HEAD
-        <p align= center>
-=======
-        <!--prompting and creating variables for login-->
         <p>
->>>>>>> cb4406fccecb6950173a56710dc189e61aeb6961
+            <input id="clickMe" type="button" value="gamecheck" onclick="gamecheck();" />
+        </p>
+        <p align= center>
             <input id="email" placeholder="EMAIL ADRESS" />
             <input id="password" placeholder="PASSWORD" />
             <button onclick="OnWard()">OnWard</button>
@@ -58,6 +56,22 @@
 
         </form>
 
+        <p align=center>
+            You start the game with 100 health and 100 days. During the game you can choose to loose<br>
+            health or time. If you lose too much of either you will start facing negative status effects.<br>
+            Once you make it through all the trials and reach the alien planet, you win the game!            
+        </p>
+        <br>
+        <p align=center>
+            Your navigation AI is malfunctioning! You can take the path you think it showed you before or try find a shorter way.
+        </p>
+        
+            <p> <input id="clickMe" type="button" value="Go the original route" onclick="choice1();" /></p> <p align= right><input id="clickMe" type="button" value="try to find a short path" onclick="choice2();" /></p>
+       
+       
+       
+
+
 <!--code to link up to fire base-->
 <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-app.js"></script>
@@ -84,8 +98,36 @@
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
 </script>
-<script>
+<script> 
     let uid;
+  // The time and health for our players  
+    var health= 100;
+    var time= 100;
+    var lost="You lose"
+    var Go="Keep going adventurer!"
+    var text1= "going down this path lead you to an asteroid field! You lost some health. health left:"
+    var text2="Looking for a shorter path you got lost and wasted time! time left:"
+    function choice1(){
+        let rando1= Math.floor((Math.random()*20)+10);
+       health=health-rando1;
+       window.alert(text1 + health);
+    }
+    function choice2(){
+        let rando2= Math.floor((Math.random()*20)+10);
+       time=time-rando2;
+       window.alert(text2 + time);
+
+    }
+    function gamecheck(){
+            if(health<=0||time<=0){
+                window.alert(lost);  
+            }
+            else{
+                window.alert(Go);    
+
+            }
+
+    }
 
 function OnWard() {
     let email = document.getElementById('email').value;
