@@ -5,6 +5,12 @@
         color :aqua;
         }
     </style>
+    <audio controls>
+        <source src="Retro-style-synth-music-loop.ogg" type="audio/ogg">
+        <source src="Retro-style-synth-music-loop.mp3" type="audio/mpeg">
+        
+      </audio>
+      
     <body>
         <h1 align= center>
             Space Exodus
@@ -12,7 +18,7 @@
         <p align= center>
             Sign Up
         </p>
-        <p>
+        <p align= right>
             <input id="clickMe" type="button" value="gamecheck" onclick="gamecheck();" />
         </p>
         <p align= center>
@@ -58,16 +64,23 @@
 
         <p align=center>
             You start the game with 100 health and 100 days. During the game you can choose to loose<br>
-            health or time. If you lose too much of either you will start facing negative status effects.<br>
-            Once you make it through all the trials and reach the alien planet, you win the game!            
+            health or time. After every decision you must press the gamecheck button to see if you lost or can keep going.<br>
+
         </p>
         <br>
         <p align=center>
-            Your navigation AI is malfunctioning! You can take the path you think it showed you before or try find a shorter way.
+            Your navigation AI is malfunctioning! You can take the path you think it showed you before or try to find a shorter way.
         </p>
         
             <p> <input id="clickMe" type="button" value="Go the original route" onclick="choice1();" /></p> <p align= right><input id="clickMe" type="button" value="try to find a short path" onclick="choice2();" /></p>
-       
+       <br>
+       <p align= center>
+           Despite your decision, as you were travelling on your journey, you got too close to a nearby star and got hit with a solar flare!<br>
+           The flair caused your external thrusters to shut down.  You can take your time and fix your systems from the inside or send your crew <br>
+           out to fix it quickly.
+       </p>
+       <br>
+       <p> <input id="clickMe" type="button" value="fix from the inside" onclick="choice3();" /></p> <p align= right><input id="clickMe" type="button" value="send out your crew" onclick="choice4();" /></p>
        
        
 
@@ -107,6 +120,8 @@
     var Go="Keep going adventurer!"
     var text1= "going down this path lead you to an asteroid field! You lost some health. health left:"
     var text2="Looking for a shorter path you got lost and wasted time! time left:"
+    var text3="Although it took some time, you fixed the ship! time left:"
+    var text4="Your crew fixed the thrusters, but they got hit by a solar flair! Their space gear made it so that they only got hurt. health: "
     function choice1(){
         let rando1= Math.floor((Math.random()*20)+10);
        health=health-rando1;
@@ -117,6 +132,17 @@
        time=time-rando2;
        window.alert(text2 + time);
 
+    }
+    function choice3(){
+        let rando3= Math.floor((Math.random()*30)+20);
+       time=time-rando3;
+       window.alert(text3 + time);
+
+    }
+    function choice4(){
+        let rando4= Math.floor((Math.random()*30)+20);
+       health=health-rando4;
+       window.alert(text4 + health);
     }
     function gamecheck(){
             if(health<=0||time<=0){
