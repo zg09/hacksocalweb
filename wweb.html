@@ -6,6 +6,7 @@
         background-repeat: no-repeat;
         background-size: 100% 100%;
         }
+        
     </style>
     <audio controls loop >
         
@@ -14,15 +15,16 @@
       </audio>
       
     <body>
+        <p align= right>
+            <input id="clickMe" type="button" value="gamecheck" onclick="gamecheck();" />
+        </p>
         <h1 align= center>
             Space Exodus
         </h1>
         <p align= center>
             Sign Up
         </p>
-        <p align= right>
-            <input id="clickMe" type="button" value="gamecheck" onclick="gamecheck();" />
-        </p>
+        
         <p align= center>
             <input id="email" placeholder="EMAIL ADRESS" />
             <input id="password" placeholder="PASSWORD" />
@@ -42,7 +44,8 @@
         <p align=center>
             You are a Captain of the Intergalactic Archaeologiy Guild and we are giving you top secret coordinates<br> 
             to the lost planet of Axi. Your job is to get to Axi and preserve the people and history there. <br>  
-            You absolutely musn't .Type the three names of your closest and bravest friends:
+            You absolutely musn't give the coordinates to Hex corp. They will take advantage of the people<br> 
+            and their resources.  Type the three names of your closest and bravest friends:
 
         </p>
         <p align=center>
@@ -98,6 +101,14 @@
     </p> 
 
     <p> <input id="clickMe" type="button" value="escape" onclick="choice7();" /></p> <p align= right><input id="clickMe" type="button" value="fight" onclick="choice8();" /></p>
+        <br>
+        <p>
+                After taking that tough blow to yor resources You and your crew are in desperate need of assistance><br>
+                Suddenly you are reciving an incoming transmission from Hex corp!  The CEO of Hex corp has promised you endless riches <br>
+                if you give them the coordinates to Axi!
+</p>
+
+<p> <input id="clickMe" type="button" value="give them the coordinates" onclick="choice9();" /></p> <p align= right><input id="clickMe" type="button" value="keep the coordinates" onclick="choice10();" /></p>
 
 <!--code to link up to fire base-->
 <!-- The core Firebase JS SDK is always required and must be listed first -->
