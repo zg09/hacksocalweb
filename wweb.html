@@ -6,6 +6,7 @@
         <p>
             Sign Up
         </p>
+        <!--prompting and creating variables for login-->
         <p>
             <input id="email" placeholder="EMAIL ADRESS" />
             <input id="password" placeholder="PASSWORD" />
@@ -45,6 +46,7 @@
 
         </form>
 
+<!--code to link up to fire base-->
 <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-app.js"></script>
 
@@ -76,7 +78,7 @@
 function OnWard() {
     let email = document.getElementById('email').value;
     let password = document.getElementById('password').value;
-
+//these are functions for the fire base to do something with the data entered above
     firebase.auth().createUserWithEmailAndPassword(email,password);
 }   
 function LetTheJourneyContinue() {
