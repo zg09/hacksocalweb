@@ -1,12 +1,32 @@
 <html>
     <style>
         body {
-        background-image: url("https://github.com/zg09/hacksocalweb/blob/master/backgroundv2.jpg?raw=true");
+        background-image: url("https://i.imgur.com/QCuUAp3.jpg");
         color :aqua;
         background-repeat: no-repeat;
         background-size: 100% 100%;
         }
         
+    </style>
+    <style>
+        .btn-group .button {
+        background-color: rgb(149, 85, 202); /* purple */
+        border: 1px solid purple;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        cursor: pointer;
+        float: none;
+        }
+        .btn-group .button:not(:last-child){
+            border-right: none;
+        }
+        .btn-group .button:hover {
+            background-color: rebeccapurple;
+        }
     </style>
     <audio controls loop >
         
@@ -79,36 +99,56 @@
             Your navigation AI is malfunctioning! You can take the path you think it showed you before or try to find a shorter way.
         </p>
         
-            <p> <input id="clickMe" type="button" value="Go the original route" onclick="choice1();" /></p> <p align= right><input id="clickMe" type="button" value="try to find a short path" onclick="choice2();" /></p>
-       <br>
+        <div class="btn-group" align= center>
+            <button class="button" onclick="choice1();">Go the original route</button>
+            <button class="button" onclick="choice2();">Try to find a short path</button>
+        </div>
+        <br>
+
        <p align= center>
            Despite your decision, as you were travelling on your journey, you got too close to a nearby star and got hit with a solar flare!<br>
            The flair caused your external thrusters to shut down.  You can take your time and fix your systems from the inside or send your crew <br>
            out to fix it quickly.
        </p>
        <br>
-       <p> <input id="clickMe" type="button" value="fix from the inside" onclick="choice3();" /></p> <p align= right><input id="clickMe" type="button" value="send out your crew" onclick="choice4();" /></p>
+        <div class="btn-group" align= center>
+            <button class="button" onclick="choice3();">Fix from the inside</button>
+            <button class="button" onclick="choice4();">Send out your crew</button>
+        </div>
        <br>
+
        <p align= center>
            You see a shining light ahead of you that appears to be spinning. It's a space station! You head inside with your crew.<br>
            As you walk up you get a glismpe of the famous salesclerk Astro! The Astounding Automaton! he offers you the choice of <br>
            of rocket fuel that is great for saving time but its fuemes are bad for health or a medkit that will raise your heath but will take some time to make.
        </p>
-       <p> <input id="clickMe" type="button" value="Get the rocket fuel" onclick="choice5();" /></p> <p align= right><input id="clickMe" type="button" value="get the medkit" onclick="choice6();" /></p>
-        <br>
-       <p align= center> You leave Astro's shop uncertain of what will happen next.  As you are sailing through the galaxy a group of<br>
+       
+        <div class="btn-group" align= center>
+            <button class="button" onclick="choice5();">Get the rocket fuel</button>
+            <button class="button" onclick="choice6();">Get the medkit</button>
+        </div>
+       <br>
+
+        <p align= center> You leave Astro's shop uncertain of what will happen next.  As you are sailing through the galaxy a group of<br>
         space pirates attacks your ship!.  You can either fly away to escape  and lose half your time or fight the pirates and lose half your health.
-    </p> 
+        </p> 
 
-    <p> <input id="clickMe" type="button" value="escape" onclick="choice7();" /></p> <p align= right><input id="clickMe" type="button" value="fight" onclick="choice8();" /></p>
+        <div class="btn-group" align= center>
+            <button class="button" onclick="choice7();">Escape</button>
+            <button class="button" onclick="choice8();">Fight</button>
+        </div>
         <br>
-        <p>
-                After taking that tough blow to yor resources You and your crew are in desperate need of assistance><br>
-                Suddenly you are reciving an incoming transmission from Hex corp!  The CEO of Hex corp has promised you endless riches <br>
-                if you give them the coordinates to Axi!
-</p>
-
-<p> <input id="clickMe" type="button" value="give them the coordinates" onclick="choice9();" /></p> <p align= right><input id="clickMe" type="button" value="keep the coordinates" onclick="choice10();" /></p>
+        
+        <p align = center>
+            After taking that tough blow to yor resources You and your crew are in desperate need of assistance><br>
+            Suddenly you are reciving an incoming transmission from Hex corp!  The CEO of Hex corp has promised you endless riches <br>
+            if you give them the coordinates to Axi!
+        </p>
+        
+        <div class="btn-group" align= center>
+            <button class="button" onclick="choice9();">Give them the coordinates</button>
+            <button class="button" onclick="choice10();">Keep the coordinates</button>
+        </div>
 
 <!--code to link up to fire base-->
 <!-- The core Firebase JS SDK is always required and must be listed first -->
